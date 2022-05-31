@@ -1,0 +1,181 @@
+"""
+Moscow Institute of Physics and Technology
+Course: Computer Science. Algorithms and data structures in Python 3.
+Lecturer: Timofey Fedorovich Hiryanov
+read on 05.09.2017
+
+Contest
+"""
+
+# |||||||||||||||||||||||1st semester, week 6|||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||Contest: Using Arrays||||||||||||||||||||||||||||||||||||||
+# --------------------------|A|----------------------------------------------------
+
+Problem A - belonging of a point to a circle
+Penalty for the parcel:	1
+Time limit: 1s
+Real time limit: 1s
+Memory limit: 64M
+Given the coordinates of a point and the radius of a circle centered at the origin of the coordinates. Determine if this
+ point belongs to a circle. Recall that a circle is a part of the plane,
+  consisting of all points of the circle and all points lying within the circle.
+
+The format of the input data is
+Three integers on one line: point coordinate on x-axis, point coordinate on y-axis, radius of circle r (r > 0).
+
+Output format
+Output "YES" without quotes, if the point belongs to the circle, "NO" without quotes otherwise.
+
+# --------------------------|B|----------------------------------------------------
+
+Problem B-Bank deposit
+Run penalty: 1
+Time limit: 1 s
+Real time limit: 1 s
+Memory limit: 64M
+The deposit in the bank is x rubles. Every year it is increased by p percent, after which the fractional
+ part of the kopecks is discarded. Each year the sum of the deposit increases. You have to determine in
+  how many years the deposit will be at least y rubles.
+
+Input data format
+Three natural numbers: x, p, y.
+
+The format of the output
+Number of years after how many years the deposit will be at least y rubles.
+
+# --------------------------|C|----------------------------------------------------
+
+Problem C-Maximum number of consecutive 1s
+Run penalty: 1
+Time limit: 1 s
+Real time limit: 1 s
+Memory limit: 64M
+You're given a sequence of 0's and 1's only. You're looking for the maximal number of consecutive 1's
+(with no 0 between them).
+
+The format of the input data
+The first line of the input consists of a natural number N<=10000 , the length of the array, followed by N numbers
+ 0 or 1, the elements of the array. Each number is entered on a new line.
+
+Output format
+One number is the result.
+
+# --------------------------|D|----------------------------------------------------
+
+Submit a solution for D-Processing an array of numbers
+Run penalty: 1
+Time limit: 1 s
+Real time limit: 1 s
+Memory limit: 64M
+At input the program gets a set of numbers ending with a grid. You need to find: the average, maximum and minimum
+ numbers in the sequence. You also need to print the sum of remainders from dividing
+  the sum of threes by the last number of threes (every 3 entered numbers make a threesome).
+
+To understand, let's look at an example of input data: 1 2 3 4 5 6 average: (1 + 2 + 3 + 4 + 5 + 6) / 6 = 3.5 maximum:
+ 6 minimum: 1 sum of residuals of threes: (1 + 2 + 3) mod 3 + (4 + 5 + 6) mod 6 = 6 mod 3 + 15 mod 6 = 0 + 3 = 3
+
+Output the average by rounding to three decimal places. To do this, use the function round(x, 3).
+
+Your program should output: 3.5 6 1 3
+
+Consider whether it makes sense to store the whole sequence.
+
+The format of the input
+A sequence of numbers ending with '#'. All numbers from 1 to 100. The number of numbers in the sequence is
+ a multiple of three. One number per line.
+
+Output format
+Four numbers separated by a space.
+
+# --------------------------|E|----------------------------------------------------
+
+Problem E-Results of students' work during the semester
+Run penalty: 1
+Time limit: 1 s
+Real time limit: 1 s
+Memory limit: 64M
+There is a semester's worth of student work. Print the students in order of their grade summation.
+ You want to output the sorted work results for each student.
+
+The data is entered as: student_id value
+
+student_id takes on values from 0 to N. value 1 to 10
+
+An example of input data: 0 3 0 5 1 3 1 2
+
+This presents the data for two students, 0 and 1. The sum of the scores of student 0 is 8. Student 1's score is 5.
+ So the scores of student 0 should be printed first, then student 1.
+  So the sorted results of student 0 should be printed first, then student 1:
+
+5 3 3 2
+
+Recall that list in python has a built-in sort method and has a sorted function.
+They have a key parameter that determines which values the object will be sorted by.
+ For example, the code below will sort the list by the length of its elements. There is also the parameter reverse.
+
+a = ['###', '@', '??'] a.sort(key=lambda x: len(x)) a ['@', '??', '###']
+ a.sort(key=lambda x: len(x), reverse=True) ['###', '??', '@']
+
+You'll learn what a lambda function is later on (there's always the google site as well).
+ To do this assignment, all you have to do is understand what the len function should be replaced with.
+
+The format of the input data
+The first line N is the number of students.
+ Then comes some number of lines (not equal to N) with student results in the format:
+  student_id value. 0 <= student_id < N.
+   The values are separated by a space. The input ends with #.
+
+Output format
+Print the sorted student results on one line.
+ Print the scores of the highest scoring student first, then the second highest, and so on. Single line results
+
+# --------------------------|F|----------------------------------------------------
+
+Task F-Chocolate
+Penalty for the parcel:	1
+Time Limit: 1s
+Real time limit: 1s
+Memory limit: 64M
+Sasha, didn't do his homework, but bought a chocolate bar. And, foolishly, he started to print it out right in class...
+ The teacher heard the rustling of the candy. She wanted to call his parents to school, but Sasha persuaded
+  her not to call them, but to give them an extra assignment.
+
+The teacher took a close look at the chocolate bar (it was the size of 3x4 bars), divided it into pieces of two bars
+ and treated everyone who did their homework. She asked Sasha to write a program which determines how many ways
+  there are to divide a 3×N chocolate bar into two pieces.
+
+Sasha needs help to complete the task.
+
+Note: all the pieces in the chocolate bar are numbered, so the ways of dividing the chocolate bars
+symmetric to a point or to an axis can be different.
+
+Input format.
+At the input there is one number N <= 10000
+
+Output format
+Print one number, the number of ways to divide the candy bar.
+
+
+
+
+# --------------------------|G|----------------------------------------------------
+
+Problem G-Stage of a String
+Penalty for the parcel:	1
+Time Limit: 1s
+Real time limit: 1s
+Memory limit: 64M
+Let a string s be given. Let call its k-th (k > 0) degree s^k string s^k = sss (k times). For example,
+ the third degree of string abc is string abcabc.
+
+The root of degree k of string s is such a string t (if it exists) that t^k = s.
+
+Your task is to write a program that finds the degree or root of a string.
+
+Input data format
+The input to the program is 2 strings. The first contains the string S and the second contains the power of k.
+ A negative power means taking the root of the corresponding power.
+
+Output format
+Print the string which contains the answer to the problem. If there is no such string, print 'NO SOLUTION'
+ (without quotes).
