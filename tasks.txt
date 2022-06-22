@@ -7,11 +7,177 @@ read on 05.09.2017
 Contest
 """
 
+# |||||||||||||||||||||||1st semester, week 3|||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||Contest: 'if, for, while'||||||||||||||||||||||||||||||||||||||
+# --------------------------|A|----------------------------------------------------
+
+A-Sum of digits of a three-digit number
+
+Ogranicheniye vremeni:	5 s
+Ogranicheniye real'nogo vremeni:	5 s
+Ogranicheniye pamyati:	64M
+Dano trekhznachnoye chislo. Naydite summu yego tsifr.
+
+Format vkhodnykh dannykh
+Vvoditsya trekhznachnoye chislo.
+
+Format vykhodnykh dannykh
+Odno chislo — summa tsifr.
+Full score: 50
+Parcel penalty: 1
+Time limit: 5 s
+Real time limit: 5 s
+Memory limit: 64M
+Given a three digit number. Find the sum of its digits.
+
+Input data format
+Enter a three-digit number.
+
+Output format
+One number is the sum of the digits.
+
+# --------------------------|B|----------------------------------------------------
+
+B - Queen move
+
+The chess queen can move any number of squares horizontally, vertically or diagonally.
+ Given two different squares on a chessboard, determine if the queen can get from the first square to the second
+  in one move.
+  For simplicity, you can ignore the case when these cells are the same.
+
+Input data format
+The program receives as input four numbers from 1 to 8 each, denoting the column number and row number,
+ first for the first cell, then for the second cell.
+
+Output Format
+The program should return YES if the second cell from the first can be reached by the queen's move. Otherwise - NO.
+
+# --------------------------|C|----------------------------------------------------
+
+C-Leap year
+
+It is required to determine whether the given year is a leap year.
+(A year is a leap year if its number is a multiple of 4 but not a multiple of 100, and also if it is a multiple of 400.)
+
+Input data format
+The input is a natural number N - the number of the year (0 < N < 100000).
+
+Output format
+Print YES if the year is a leap year and NO otherwise.
+
+# --------------------------|D|----------------------------------------------------
+
+D-list of squares
+
+For a given natural number N print all squares of natural numbers not exceeding N , in ascending order.
+
+IMPORTANT! In this task, you need to use a loop.
+
+Input data format
+The input of the program is an integer N not exceeding 10000.
+
+Output Format
+The program should output a sequence of numbers in ascending order. White is used as a separator.
+
+# --------------------------|E|----------------------------------------------------
+
+E-binary logarithm
+
+Given a natural number N, print the smallest integer k such that 2^k >= N .
+
+IMPORTANT! In this task, you need to use a loop. The use of the if statement is prohibited.
+ You cannot use exponentiation in this problem.
+
+input data format
+The input to the program is a natural number N, not exceeding 10000.
+
+output data format
+It is required to print the smallest k that satisfies the condition of the problem
+
+# --------------------------|F|----------------------------------------------------
+
+F-sequence length
+
+
+The program receives as input a sequence of non-negative integers, each number is written on a separate line.
+ The sequence ends with the digit 0, after reading which the program should finish its work and print
+  the number of members of the sequence (not counting the final digit 0). Digits after 0 do not need to be read.
+
+Input data format
+The input contains a sequence of integers (each on a new line) ending in 0. The number 0 is not included in the sequence.
+
+Output Format
+Print the length of the sequence.
+
+# --------------------------|G|----------------------------------------------------
+
+G-sum of the entered sequence
+
+Determine the sum of all elements of a sequence that ends with the number 0.
+
+Numbers following zero do not need to be read.
+
+Input data format
+The elements of the sequence are entered, one integer per line. Numbers are entered until 0 is entered.
+
+Output format
+Output one integer - the sum of the sequence.
+
+Count the number of even elements in an array of integers ending in zero.
+ Zero itself does not need to be taken into account.
+
+Input data format
+An array of numbers ending in zero (each number on a new line, zero is not included in the array)
+
+Output format
+One number is the result.
+
+# --------------------------|H|----------------------------------------------------
+
+H-is the number of even elements
+
+Count the number of even elements in an array of integers ending in zero.
+Zero by itself does not need to be taken into account.
+
+Input data format
+An array of numbers ending in zero (each number on a new line, zero is not included in the array)
+
+Output Format
+One number is the result.
+
+# --------------------------|I|----------------------------------------------------
+
+I-Max sequence
+
+The sequence consists of natural numbers and ends with the number 0.
+ Determine the value of the largest element of the sequence.
+
+Numbers after zero do not need to be read.
+
+Input data format
+A sequence of integers is entered, ending with the number 0 (the number 0 itself is not included in the sequence).
+
+Output Format
+Print the answer to the problem (one number).
+
+# --------------------------|J|----------------------------------------------------
+
+J-The number of elements equal to the maximum
+
+The sequence consists of natural numbers and ends with the digit 0. In total, no more than 10,000 digits are entered (not counting the final digit 0). Determine how many elements of this sequence are equal to its largest element. Digits after 0 do not need to be read.
+
+Input data format
+A sequence of integers is entered, ending with the number 0 (the number 0 itself is not included in the sequence).
+
+Output Format
+Print the answer to the problem (one number).
+
 # |||||||||||||||||||||||1st semester, week 6|||||||||||||||||||||||||||||||||||||||
 # |||||||||||||||||||||||Contest: Using Arrays||||||||||||||||||||||||||||||||||||||
 # --------------------------|A|----------------------------------------------------
 
-Problem A - belonging of a point to a circle
+A - belonging of a point to a circle
+
 Penalty for the parcel:	1
 Time limit: 1s
 Real time limit: 1s
@@ -28,7 +194,8 @@ Output "YES" without quotes, if the point belongs to the circle, "NO" without qu
 
 # --------------------------|B|----------------------------------------------------
 
-Problem B-Bank deposit
+B-Bank deposit
+
 Run penalty: 1
 Time limit: 1 s
 Real time limit: 1 s
@@ -45,7 +212,8 @@ Number of years after how many years the deposit will be at least y rubles.
 
 # --------------------------|C|----------------------------------------------------
 
-Problem C-Maximum number of consecutive 1s
+C-Maximum number of consecutive 1s
+
 Run penalty: 1
 Time limit: 1 s
 Real time limit: 1 s
@@ -63,6 +231,7 @@ One number is the result.
 # --------------------------|D|----------------------------------------------------
 
 Submit a solution for D-Processing an array of numbers
+
 Run penalty: 1
 Time limit: 1 s
 Real time limit: 1 s
@@ -89,7 +258,8 @@ Four numbers separated by a space.
 
 # --------------------------|E|----------------------------------------------------
 
-Problem E-Results of students' work during the semester
+E-Results of students' work during the semester
+
 Run penalty: 1
 Time limit: 1 s
 Real time limit: 1 s
@@ -132,6 +302,7 @@ Print the sorted student results on one line.
 # --------------------------|F|----------------------------------------------------
 
 Task F-Chocolate
+
 Penalty for the parcel:	1
 Time Limit: 1s
 Real time limit: 1s
@@ -160,7 +331,8 @@ Print one number, the number of ways to divide the candy bar.
 
 # --------------------------|G|----------------------------------------------------
 
-Problem G-Stage of a String
+G-Stage of a String
+
 Penalty for the parcel:	1
 Time Limit: 1s
 Real time limit: 1s

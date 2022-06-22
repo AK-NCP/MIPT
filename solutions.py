@@ -8,6 +8,269 @@ Contest
 """
 
 
+# |||||||||||||||||||||||1st semester, week 3|||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||Contest: 'if, for, while'||||||||||||||||||||||||||||||||||||||
+# --------------------------|A|----------------------------------------------------
+
+def input_int():
+    n = int(input())
+    return n
+
+
+def find_sum_number(n: int) -> int:
+    """
+    >>> find_sum_number(179)
+    17
+    >>> find_sum_number(128)
+    11
+    >>> find_sum_number(101)
+    2
+     >>> find_sum_number(101452346237237346327327523573475)
+     128
+     >>> find_sum_number(0)
+     0
+     >>> find_sum_number(42)
+     6
+     >>> find_sum_number(7)
+     7
+    """
+    divider = 10 ** (len(str(n)) - 1)
+    sum_num = 0
+    while divider:
+        sum_num += (n // divider) % 10
+        divider //= 10
+    return sum_num
+
+
+# --------------------------|B|----------------------------------------------------
+
+def input_data_list():
+    data_list = []
+    for _ in range(4):
+        data_list.append(int(input()))
+    return data_list
+
+
+def queen_move(data_list: list) -> str:
+    """
+    >>> print(queen_move([1, 1, 8, 8]))
+    YES
+    >>> print(queen_move([1, 1, 8, 1]))
+    YES
+    >>> print(queen_move([5, 5, 7, 4]))
+    NO
+    >>> print(queen_move([5, 3, 6, 7]))
+    NO
+    >>> print(queen_move([3, 4, 2, 5]))
+    YES
+    >>> print(queen_move([3, 8, 8, 5]))
+    NO
+    """
+    if ((data_list[0] - data_list[2]) ** 2) == ((data_list[1] - data_list[3]) ** 2):
+        result = 'YES'
+    elif (data_list[0] - data_list[2]) == 0 or (data_list[1] - data_list[3]) == 0:
+        result = 'YES'
+    else:
+        result = 'NO'
+    return result
+
+
+# --------------------------|C|----------------------------------------------------
+
+def leap_year(year: int) -> str:
+    """
+    >>> print(leap_year(1))
+    NO
+    >>> print(leap_year(2000))
+    YES
+    >>> print(leap_year(400))
+    YES
+    >>> print(leap_year(9547))
+    NO
+    """
+    if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+        result = 'YES'
+    else:
+        result = 'NO'
+    return result
+
+
+# --------------------------|D|----------------------------------------------------
+
+
+def find_list_squarest(num: int) -> list:
+    """
+    >>> print(*find_list_squarest(50))
+    1 4 9 16 25 36 49
+    >>> print(*find_list_squarest(16))
+    1 4 9 16
+    >>> print(*find_list_squarest(16))
+    1 4 9 16
+    >>> print(*find_list_squarest(101))
+    1 4 9 16 25 36 49 64 81 100
+
+    """
+    list_squarest = []
+    i = 1
+    while i ** 2 <= num:
+        list_squarest.append(i ** 2)
+        i += 1
+    return list_squarest
+
+
+# --------------------------|E|----------------------------------------------------
+
+def find_binary_logarithm(num: int) -> int:
+    """
+    >>> find_binary_logarithm(4)
+    2
+    >>> find_binary_logarithm(10)
+    4
+    >>> find_binary_logarithm(1627)
+    11
+    >>> find_binary_logarithm(8772)
+    14
+    """
+    k = 0
+    while num > 1:
+        k += 1
+        num = (num + 1) // 2
+    return k
+
+
+# --------------------------|F|----------------------------------------------------
+
+def list_itemsv2(num_list):
+    for num in num_list:
+        yield num
+
+
+def input_numv2(num_list_test: list = None, stopbit=None):  # TODO
+    global next_numv2  # !!!!!!!!___critical place in the test___!!!!!!!!
+    if stopbit:
+        del next_numv2  # delete global value
+        return '#'
+    if num_list_test:
+        if 'next_numv2' not in globals():  # create global value
+            next_numv2 = list_itemsv2(num_list_test)
+        num = next(next_numv2)
+        return num
+    else:
+        num = input()
+        return num
+
+
+def sequence_length(num: list = None):
+    """
+    >>> sequence_length([1, 7, 9, 0, 5])
+    3
+    >>> sequence_length([29, 66, 76, 73, 14, 25, 40, 30, 40, 18, 53, 7, 44, 70, 63, 6, 19, 98, 41, 87, 47, 37, 12, 99, 31, 80, 90, 11, 30, 9, 14, 50, 93, 28, 76, 30, 90, 95, 56, 88, 47, 60, 59, 18, 79, 91, 45, 100, 22, 16, 61, 38, 69, 0, 77])
+    53
+    """
+    k = 0
+    while True:
+        N = int(input_numv2(num))
+        if not N:
+            break
+        k += 1
+    if num:
+        input_numv2(stopbit=True)  # Test stop
+    return k
+
+
+# --------------------------|G|----------------------------------------------------
+
+def sum_entered_sequence(num: list = None):
+    """
+    >>> sum_entered_sequence([5, 3, 10, 0])
+    18
+    >>> sum_entered_sequence([17, -4, 0])
+    13
+    """
+    k = 0
+    while True:
+        N = int(input_numv2(num))
+        if not N:
+            break
+        k += N
+    if num:
+        input_numv2(stopbit=True)  # Test stop
+    return k
+
+
+# --------------------------|H|----------------------------------------------------
+
+def number_even_elements(num: list = None):
+    """
+    >>> number_even_elements([1, 2, 0])
+    1
+    >>> number_even_elements([1, -1, 0])
+    0
+    >>> number_even_elements([35, 37, -39, -10, -48, 2, 33, -31, -43, -3, 9, 2, -18, -8, -2, 17, 13, 24, 33, 32, 47, -10, 43, 21, -29, 0])
+    10
+    """
+    k = 0
+    while True:
+        N = int(input_numv2(num))
+        if not N:
+            break
+        if N % 2 == 0:
+            k += 1
+    if num:
+        input_numv2(stopbit=True)  # Test stop
+    return k
+
+
+# --------------------------|I|----------------------------------------------------
+
+def maximum_sequence(num: list = None):
+    """
+    >>> maximum_sequence([1, 7, 9, 0])
+    9
+    >>> maximum_sequence([5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 5957, 0])
+    5957
+    >>> maximum_sequence([28, 82, 50, 10, 32, 91, 85, 36, 7, 23, 15, 68, 83, 52, 41, 87, 25, 24, 50, 91, 96, 19, 81, 46, 98, 48, 66, 70, 93, 81, 77, 79, 33, 33, 80, 60, 53, 47, 61, 25, 99, 0])
+    99
+    """
+    max_num = float("-inf")
+    while True:
+        N = int(input_numv2(num))
+        if not N:
+            break
+        if max_num < N:
+            max_num = N
+    if num:
+        input_numv2(stopbit=True)  # Test stop
+    return max_num
+
+
+# --------------------------|J|----------------------------------------------------
+
+def number_elements_equal_maximum(num: list = None):
+    """
+    >>> number_elements_equal_maximum([1, 7, 9, 0])
+    1
+    >>> number_elements_equal_maximum([1, 3, 3, 1, 0])
+    2
+    >>> number_elements_equal_maximum([87, 79, 56, 99, 19, 63, 71, 13, 45, 29, 135, 103, 82, 140, 48, 100, 38, 92, 96, 131, 140, 65, 66, 119, 105, 140, 0])
+    3
+    """
+    max_num = float("-inf")
+    k = 0
+    while True:
+        N = int(input_numv2(num))
+        if not N:
+            break
+        if max_num < N:
+            max_num = N
+            k = 1
+        elif max_num == N:
+            k += 1
+    if num:
+        input_numv2(stopbit=True)  # Test stop
+    return k
+
+
 # |||||||||||||||||||||||1st semester, week 6|||||||||||||||||||||||||||||||||||||||
 # |||||||||||||||||||||||Contest: Using Arrays||||||||||||||||||||||||||||||||||||||
 
@@ -100,8 +363,8 @@ def list_items(num_list):
         yield num
 
 
-def input_num(num_list_test: list):
-    global next_num
+def input_num(num_list_test: list):  # TODO
+    global next_num  # !!!!!!!!___critical place in the test___!!!!!!!!
     if num_list_test:
         if 'next_num' not in globals():
             next_num = list_items(num_list_test)
