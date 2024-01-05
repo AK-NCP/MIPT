@@ -507,6 +507,63 @@ def string_degree(list_data: list) -> str:
                 flag = (new_str[j] == list_data[0][j + size * i]) and flag
         return new_str if flag else "NO SOLUTION"
 
+# |||||||||||||||||||||||1st semester|||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||Контест: использование массивов||||||||||||||||||||||||||||||||||||||
+# --------------------------|A|----------------------------------------------------
+
+def delivery(data_list: list) -> str:
+    """
+    >>> print(delivery([1, 1, 5, 10, 5, 10, 11, 11]))
+    YES
+    >>> print(delivery([1, 1, 5, 10, 5, 10, 5, 11]))
+    NO
+    >>> print(delivery([1, 1, 5, 10, 5, 10, 10, 11]))
+    YES
+    >>> print(delivery([1, 1, 11, 10, 5, 7, 11, 11]))
+    NO
+    """
+    truck_weight_without_load = int(data_list[0])
+    platform_height = int(data_list[1])
+    piano_weight = int(data_list[2])
+    piano_height = int(data_list[3])
+    refrigerator_weight = int(data_list[4])
+    refrigerator_height = int(data_list[5])
+    max_permissible_weight_bridge = int(data_list[6])
+    max_permissible_height_tunnel = int(data_list[7])
+    weight_all = 0
+    refrigerator_platform_height = 0
+    piano_platform_height = 0
+    institute = False
+    dormitories = False
+    
+    weight_all = (truck_weight_without_load +\
+                piano_weight +\
+                refrigerator_weight)  
+    
+    refrigerator_platform_height = platform_height + refrigerator_height
+    piano_platform_height = platform_height + piano_height
+    
+    if (refrigerator_platform_height <= max_permissible_height_tunnel and
+      piano_platform_height <= max_permissible_height_tunnel):
+    institute = True
+    
+    elif(weight_all <= max_permissible_weight_bridge and
+       refrigerator_platform_height <= max_permissible_height_tunnel):
+    institute = True
+    
+    
+    if weight_all <= max_permissible_weight_bridge:
+    dormitories = True
+    
+    elif (weight_all - refrigerator_weight <= max_permissible_weight_bridge):
+    dormitories = True
+    
+    if institute and dormitories:
+    return print('YES')
+    else:
+    return print('NO')
+
+
 
 if __name__ == "__main__":
     import doctest
